@@ -16,7 +16,7 @@ pipeline{
             
             steps{
                 
-                echo "test my proj"
+                echo "test my proj2"
                 
             }
         }
@@ -25,7 +25,7 @@ pipeline{
             
             steps{
                 
-                echo "deploy my proj"
+                echo "deploy my proj2"
             }
         }
     }
