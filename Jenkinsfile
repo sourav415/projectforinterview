@@ -6,6 +6,13 @@ pipeline{
         
         stage('Build'){
             
+            when{
+                expression{
+                    
+                    env.BRANCH_NAME == 'dev'
+                }
+            }
+            
             steps{
                 
                 echo "build my proj"
@@ -16,7 +23,7 @@ pipeline{
             
             steps{
                 
-                echo "test my proj2"
+                echo "test my proj"
                 
             }
         }
@@ -25,8 +32,17 @@ pipeline{
             
             steps{
                 
-                echo "deploy my proj2"
+                echo "deploy my proj"
             }
         }
+    }
+    
+    post{
+     
+     always{
+         
+         echo "always exectue"
+     }
+        
     }
 }
