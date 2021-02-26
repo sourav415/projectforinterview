@@ -11,6 +11,22 @@ pipeline{
                 echo "build my proj"
             }
         }
+        
+        stage('Test'){
+            
+            steps{
+                
+                echo "test my proj"
+                
+            }
+        }
+        
+        stage('deploy'){
+            
+            steps{
+                
+                echo "deploy my proj"
+            }
+        }
     }
 }
-
