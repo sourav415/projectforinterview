@@ -15,9 +15,7 @@ pipeline{
             
             steps{
                 
-                withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'pwd', usernameVariable: 'uname')]) {
-                    bat "build my proj ${uname}"
-                    }
+                echo "Hi"
                 
             }
         }
@@ -26,7 +24,9 @@ pipeline{
             
             steps{
                 
-                echo "test my proj"
+                   withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'pwd', usernameVariable: 'uname')]) {
+                    bat "build my proj ${uname}"
+                    }
                 
             }
         }
